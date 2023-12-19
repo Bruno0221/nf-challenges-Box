@@ -6,14 +6,14 @@ export default function App() {
 
   function handleClick() {
     setIsActive(!isActive);
-    // Check that the value changes correctly.
-    console.log(isActive);
   }
 
   return (
     <main>
       <div className={`box ${isActive ? "box--active" : ""}`} />
-      <button onClick={handleClick}>Activate</button>
+      <button onClick={handleClick}>
+        {isActive ? <span>Activate</span> : <span>Deactivate</span>}
+      </button>
     </main>
   );
 }
